@@ -1,3 +1,6 @@
+import sys
+
+
 class Interpreter:
     def __init__(self, code: str):
         self.code = code
@@ -63,3 +66,16 @@ class Interpreter:
                 self._loop()
 
             self._iterator += 1
+
+
+if __name__ == "__main__":
+    if len(sys.argv) >= 2:
+        with open(sys.argv[1]) as file:
+            bf = Interpreter(code=file.read())
+            print(bf)
+
+    else:
+        filename = input("Enter the file name: ")
+        with open(filename) as file:
+            bf = Interpreter(code=file.read())
+            print(bf)
