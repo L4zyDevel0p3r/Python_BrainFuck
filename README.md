@@ -1,5 +1,5 @@
 # Python BrainFuck
-A simple Brainfuck interpreter written in Python
+A simple BrainFuck interpreter written in Python.
 
 # Usage
 ```
